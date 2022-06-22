@@ -1,6 +1,6 @@
 # cypress-multiple-aliases
 
-[cypress/integration/spec.js](./cypress/integration/spec.js)
+See the file [cypress/integration/spec.js](./cypress/integration/spec.js)
 
 Read the blog post [Avoid Cypress Pyramid of Doom](https://glebbahmutov.com/blog/avoid-cypress-pyramid-of-doom/)
 

@@ -29,6 +29,13 @@ it('adds numbers via aliases', () => {
     .then(parseInt)
     .as('result')
     .then(function () {
-      expect(this.a + this.b).to.eq(this.result)
+      expect(this.a + this.b).to.equal(this.result)
     })
+})
+
+it('checks the page', () => {
+  cy.visit('public/index.html')
+  cy.get('[name=a]').should('have.value', '2')
+  cy.get('[name=b]').should('have.value', '3')
+  cy.contains('#result', '5')
 })
