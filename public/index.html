@@ -3,4 +3,18 @@
   <div>a = <input name="a" type="number" value="2" /></div>
   <div>b = <input name="b" type="number" value="3" /></div>
   <div>a + b = <span id="result">5</span></div>
+  <script>
+    function computeSum() {
+      const a = parseInt(document.querySelector('input[name=a]').value)
+      const b = parseInt(document.querySelector('input[name=b]').value)
+      if (isNaN(a) || isNaN(b)) {
+        document.getElementById('result').innerText = 'empty'
+      } else {
+        document.getElementById('result').innerText = a + b
+      }
+    }
+    document
+      .querySelector('input[name=a]')
+      .addEventListener('change', computeSum)
+  </script>
 </body>

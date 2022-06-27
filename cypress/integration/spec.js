@@ -1,25 +1,5 @@
 /// <reference types="cypress" />
 
-it('adds numbers', () => {
-  cy.visit('public/index.html')
-  cy.get('[name=a]')
-    .invoke('val')
-    .then(parseInt)
-    .then((a) => {
-      cy.get('[name=b]')
-        .invoke('val')
-        .then(parseInt)
-        .then((b) => {
-          cy.get('#result')
-            .invoke('text')
-            .then(parseInt)
-            .then((result) => {
-              expect(a + b).to.eq(result)
-            })
-        })
-    })
-})
-
 it('adds numbers via aliases', () => {
   cy.visit('public/index.html')
   cy.get('[name=a]').invoke('val').then(parseInt).as('a')
@@ -31,11 +11,4 @@ it('adds numbers via aliases', () => {
     .then(function () {
       expect(this.a + this.b).to.equal(this.result)
     })
-})
-
-it('checks the page', () => {
-  cy.visit('public/index.html')
-  cy.get('[name=a]').should('have.value', '2')
-  cy.get('[name=b]').should('have.value', '3')
-  cy.contains('#result', '5')
 })
