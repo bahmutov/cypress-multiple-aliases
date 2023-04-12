@@ -1,5 +1,25 @@
 /// <reference types="cypress" />
 
+it('adds numbers (pyramid)', () => {
+  cy.visit('public/index.html')
+  cy.get('[name=a]')
+    .invoke('val')
+    .then(parseInt)
+    .then((a) => {
+      cy.get('[name=b]')
+        .invoke('val')
+        .then(parseInt)
+        .then((b) => {
+          cy.get('#result')
+            .invoke('text')
+            .then(parseInt)
+            .then((result) => {
+              expect(a + b, 'sum').to.equal(result)
+            })
+        })
+    })
+})
+
 it('adds numbers via aliases', () => {
   cy.visit('public/index.html')
   cy.get('[name=a]').invoke('val').then(parseInt).as('a')
@@ -57,6 +77,7 @@ describe('Use beforeEach hook and number values', () => {
     cy.get('[name=a]')
       .should('have.prop', 'valueAsNumber')
       .as('a')
+      // log the number to the Command Log
       .should('be.finite')
     cy.get('[name=b]')
       .should('have.prop', 'valueAsNumber')
