@@ -72,7 +72,7 @@ describe('Use beforeEach hook', () => {
 })
 
 describe('Use beforeEach hook and number values', () => {
-  beforeEach(() => {
+  beforeEach(function () {
     cy.visit('public/index.html')
     cy.get('[name=a]')
       .should('have.prop', 'valueAsNumber')

@@ -12,6 +12,10 @@ Read the blog post [Avoid Cypress Pyramid of Doom](https://glebbahmutov.com/blog
 
 Watch the [Good Cypress Test Syntax](https://www.youtube.com/watch?v=X8iIoTxu_8k) video, where I revisit this test to show how a test should be rewritten.
 
+## Bonus 2: valueAsNumber
+
+Watch the video [Cypress Hook And Aliases Example](https://youtu.be/l1XIn0TopQg)
+
 ## Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2022
