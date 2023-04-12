@@ -50,3 +50,21 @@ describe('Use beforeEach hook', () => {
     cy.contains('#result', this.a + this.b)
   })
 })
+
+describe('Use beforeEach hook and number values', () => {
+  beforeEach(() => {
+    cy.visit('public/index.html')
+    cy.get('[name=a]')
+      .should('have.prop', 'valueAsNumber')
+      .as('a')
+      .should('be.finite')
+    cy.get('[name=b]')
+      .should('have.prop', 'valueAsNumber')
+      .as('b')
+      .should('be.finite')
+  })
+
+  it('has values set', function () {
+    cy.contains('#result', this.a + this.b)
+  })
+})
