@@ -13,6 +13,10 @@ it('adds numbers via aliases', () => {
     })
 })
 
+// these tests are written to show better testing practices
+// 1: do not trust the data from the page
+// 2: do not compute the result, know what to expect
+// 3: control the page by typing our values
 it('checks the page', () => {
   cy.visit('public/index.html')
   cy.get('[name=a]').should('have.value', '2')
