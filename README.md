@@ -2,7 +2,7 @@
 
 See the file [cypress/integration/spec.js](./cypress/integration/spec.js)
 
-Read the blog post [Avoid Cypress Pyramid of Doom](https://glebbahmutov.com/blog/avoid-cypress-pyramid-of-doom/)
+Read the blog post [Avoid Cypress Pyramid of Doom](https://glebbahmutov.com/blog/avoid-cypress-pyramid-of-doom/) and [Pass Values Between Cypress Tests](https://glebbahmutov.com/blog/pass-values-between-tests/).
 
 ![The tests](./images/finite.png)
 
